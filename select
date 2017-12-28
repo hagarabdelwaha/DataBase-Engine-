@@ -1,0 +1,14 @@
+#!/bin/bash
+select choice in create_table insert 
+do
+case $choice in 
+create_table )
+echo "enter table name"
+read
+. ./createtable.sh $REPLY
+;;
+*)
+exit
+;;
+esac
+done
